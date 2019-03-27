@@ -1,7 +1,11 @@
 declare namespace PkgUp {
+  interface Options {
+    cwd: string
+  }
+
   interface PkgUp {
-    (cwd?: string): Promise<string | null>
-    sync: (cwd?: string) => string | null
+    (options?: Options): Promise<string | null>
+    sync: (options?: Options) => string | null
   }
 }
 
